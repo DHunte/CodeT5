@@ -170,7 +170,12 @@ def load_and_cache_multi_gen_data(args, pool, tokenizer, split_tag, only_src=Fal
 
 
 def get_filenames(data_root, task, sub_task, split=''):
-    if task == 'concode':
+    if task == 'generation':
+        data_dir = '{}/{}'.format(data_root, task)
+        train_fn = '{}/train.json'.format(data_dir)
+        dev_fn = '{}/dev.json'.format(data_dir)
+        test_fn = '{}/test.json'.format(data_dir)
+    elif task == 'concode':
         data_dir = '{}/{}'.format(data_root, task)
         train_fn = '{}/train.json'.format(data_dir)
         dev_fn = '{}/dev.json'.format(data_dir)
