@@ -13,7 +13,7 @@ def add_lang_by_task(target_str, task, sub_task):
             target_str = '<java> ' + target_str
     elif task == 'concode':
         target_str = '<java> ' + target_str
-    elif task == 'defect':
+    elif task == 'defect' or task == 'generation':
         target_str = target_str
     return target_str
 
