@@ -55,6 +55,13 @@ def get_args_by_task_model(task, sub_task, model_tag):
         trg_len = 150
         epoch = 30
         patience = 3
+   elif task == 'generation':
+        # Read 100000 examples, avg src len: 71, avg trg len: 26, max src len: 567, max trg len: 140
+        # [TOKENIZE] avg src len: 213, avg trg len: 33, max src len: 2246, max trg len: 264
+        src_len = 320
+        trg_len = 150
+        epoch = 30
+        patience = 3
     elif task == 'defect':
         # Read 21854 examples, avg src len: 187, avg trg len: 1, max src len: 12195, max trg len: 1
         # [TOKENIZE] avg src len: 597, avg trg len: 1, max src len: 41447, max trg len: 1
@@ -88,7 +95,7 @@ def get_args_by_task_model(task, sub_task, model_tag):
             else:
                 bs = 10
     lr = 5
-    if task == 'concode':
+    if task == 'concode' or task == 'generation':
         lr = 10
     elif task == 'defect':
         lr = 2
@@ -134,7 +141,7 @@ def get_sub_tasks(task):
         sub_tasks = ['java-cs', 'cs-java']
     elif task == 'refine':
         sub_tasks = ['small', 'medium']
-    elif task in ['concode', 'defect', 'clone', 'multi_task']:
+    elif task in ['concode', 'defect', 'clone', 'multi_task','generation']:
         sub_tasks = ['none']
     return sub_tasks
 
