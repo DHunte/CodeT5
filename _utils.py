@@ -209,6 +209,24 @@ def read_refine_examples(filename, data_num):
                 break
     return examples
 
+def read_generation_examples(filename, data_num):
+    """Read examples from filename."""
+    examples = []
+
+    with open(filename) as f:
+        for idx, line in enumerate(f):
+            x = json.loads(line)
+            examples.append(
+                Example(
+                    idx=idx,
+                    source=x["code"].strip(),
+                    target=x["nl"].strip()
+                )
+            )
+            idx += 1
+            if idx == data_num:
+                break
+    return examples
 
 def read_concode_examples(filename, data_num):
     """Read examples from filename."""
