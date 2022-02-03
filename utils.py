@@ -225,6 +225,7 @@ def read_examples(filename, data_num, task):
         'summarize': read_summarize_examples,
         'refine': read_refine_examples,
         'translate': read_translate_examples,
+        'generation': read_generation_examples,
         'concode': read_concode_examples,
         'clone': read_clone_examples,
         'defect': read_defect_examples,
