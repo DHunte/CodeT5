@@ -55,7 +55,7 @@ def get_args_by_task_model(task, sub_task, model_tag):
         trg_len = 150
         epoch = 30
         patience = 3
-   elif task == 'generation':
+    elif task == 'generation':
         # Read 100000 examples, avg src len: 71, avg trg len: 26, max src len: 567, max trg len: 140
         # [TOKENIZE] avg src len: 213, avg trg len: 33, max src len: 2246, max trg len: 264
         src_len = 320
