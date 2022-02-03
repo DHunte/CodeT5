@@ -103,7 +103,7 @@ def add_args(parser):
         args.lang = args.sub_task
     elif args.task in ['refine', 'concode', 'clone']:
         args.lang = 'java'
-    elif args.task == 'defect' or args.generation == 'generation':
+    elif args.task == 'defect' or args.task == 'generation':
         args.lang = 'c'
     elif args.task == 'translate':
         args.lang = 'c_sharp' if args.sub_task == 'java-cs' else 'java'
