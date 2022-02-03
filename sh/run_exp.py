@@ -150,7 +150,7 @@ if __name__ == '__main__':
     parser = argparse.ArgumentParser()
     parser.add_argument("--model_tag", type=str, default='codet5_base',
                         choices=['roberta', 'codebert', 'bart_base', 'codet5_small', 'codet5_base'])
-    parser.add_argument("--task", type=str, default='summarize', choices=['summarize', 'concode', 'translate','generation'
+    parser.add_argument("--task", type=str, default='summarize', choices=['summarize', 'concode', 'translate','generation',
                                                                           'refine', 'defect', 'clone', 'multi_task'])
     parser.add_argument("--sub_task", type=str, default='ruby')
     parser.add_argument("--res_dir", type=str, default='results', help='directory to save fine-tuning results')
