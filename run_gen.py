@@ -75,7 +75,7 @@ def eval_ppl_epoch(args, eval_data, eval_examples, model, tokenizer):
         eval_loss += loss.item()
         batch_num += 1
     eval_loss = eval_loss / batch_num
-    eval_ppl = round(numpy.exp(eval_loss), 5)
+    eval_ppl = round(np.exp(eval_loss), 5)
     return eval_ppl
 
 
