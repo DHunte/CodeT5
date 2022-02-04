@@ -23,7 +23,7 @@ import os
 import logging
 import argparse
 import math
-import numpy
+import numpy as np
 from tqdm import tqdm
 import multiprocessing
 import time
