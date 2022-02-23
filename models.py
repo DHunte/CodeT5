@@ -11,7 +11,6 @@ logger = logging.getLogger(__name__)
 MODEL_CLASSES = {'roberta': (RobertaConfig, RobertaModel, RobertaTokenizer),
                  't5': (T5Config, T5ForConditionalGeneration, T5Tokenizer),
                  'codet5': (T5Config, T5ForConditionalGeneration, RobertaTokenizer),
-                 'generation': (T5Config, T5ForConditionalGeneration, RobertaTokenizer),
                  'bart': (BartConfig, BartForConditionalGeneration, BartTokenizer)}
 
 
