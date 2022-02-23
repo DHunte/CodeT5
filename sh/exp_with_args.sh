@@ -61,7 +61,7 @@ elif [[ $MODEL_TAG == codet5_small ]]; then
   TOKENIZER=Salesforce/codet5-small
   MODEL_PATH=Salesforce/codet5-small
 elif [[ $MODEL_TAG == generation ]]; then
-  MODEL_TYPE=generation
+  MODEL_TYPE=codet5
   TOKENIZE="/experiments/dhunter/CodeT5/tokenizer/generation"
   MODEL_PATH=Salesforce/codet5-small
 elif [[ $MODEL_TAG == codet5_base ]]; then
