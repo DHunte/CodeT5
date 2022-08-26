@@ -138,7 +138,7 @@ def get_sub_tasks(task):
     if task == "generation":
         sub_tasks = ['none'] 
     elif task == 'summarize':
-        sub_tasks = ['ruby', 'javascript', 'go', 'python', 'java', 'php']
+        sub_tasks = ['ruby', 'javascript', 'go', 'python', 'java', 'php','c']
     elif task == 'translate':
         sub_tasks = ['java-cs', 'cs-java']
     elif task == 'refine':
