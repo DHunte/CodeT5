@@ -1,4 +1,4 @@
-WORKDIR="/experiments/dhunter/CodeT5"
+WORKDIR="/workspace/CodeT5"
 export PYTHONPATH=$WORKDIR
 
 TASK=${1}
