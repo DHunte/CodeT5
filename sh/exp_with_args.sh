@@ -64,6 +64,10 @@ elif [[ $MODEL_TAG == codet5_base ]]; then
   MODEL_TYPE=codet5
   TOKENIZER=Salesforce/codet5-base
   MODEL_PATH=Salesforce/codet5-base
+elif [[ $MODEL_TAG == codet5_large ]]; then
+  MODEL_TYPE=codet5
+  TOKENIZER=Salesforce/codet5-large
+  MODEL_PATH=Salesforce/codet5-large
 fi
 
 
